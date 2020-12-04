@@ -1,0 +1,9 @@
+import { <%= classify(name) %>State } from './<%= name %>.reducers';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+
+export const select<%= classify(name) %>Property = createFeatureSelector('<%= name %>');
+
+export const selectFeatureProperty = createSelector(
+    select<%= classify(name) %>Property,
+    (state: <%= classify(name) %>State, props) => state //state.field
+);

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "redux",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "module": {
+      "type": "string",
+      "default": "",
+      "description": "Allows specification of the declaring module.",
+      "alias": "m",
+      "subtype": "filepath",
+      "x-prompt": "To which module (path) should the state be registered in?"
+    }
+  },
+  "required": ["name"]
+}

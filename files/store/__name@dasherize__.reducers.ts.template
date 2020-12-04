@@ -1,0 +1,24 @@
+
+import {
+    ActionReducer,
+    ActionReducerMap,
+    createFeatureSelector,
+    createSelector,
+    MetaReducer
+  } from '@ngrx/store';
+// import { environment } from 'apps/hpo/src/environments/environment';
+import { environment } from '<%= environmentsPath %>';
+  
+  // export const <%= name %>FeatureKey = '<%= name %>';
+  export const <%= camelize(name) %>FeatureKey = '<%= camelize(name) %>';
+
+  export interface <%= classify(name) %>State {
+  
+  }
+  
+  export const reducers: ActionReducerMap<<%= classify(name) %>State> = {
+  
+  };
+  
+  
+  export const metaReducers: MetaReducer<<%= classify(name) %>State>[] = !environment.production ? [] : [];
